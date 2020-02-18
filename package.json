@@ -1,3 +1,11 @@
 {
-    "framework": "jasmine2"
+  "name": "bubble-sort",
+  "version": "1.0.0",
+  "description": "learn about bubble sort",
+  "scripts": {
+    "test": "testem"
+  },
+  "dependencies": {
+    "testem": "^3.0.2"
   }
+}
