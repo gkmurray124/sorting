@@ -15,11 +15,10 @@ function merge(array) {
     let firstHalf = array[0]
     let secondHalf = array[1]
     for(let i = 0; i < firstHalf.length; i++) { 
-        // for(let j = 0; j < secondHalf.length; j++) { 
             if(!secondHalf[i]) { 
                 mergedArray.push(firstHalf[i])
             }
-            else if(firstHalf[i] > secondHalf[i]) { 
+            else if (firstHalf[i] > secondHalf[i]) { 
                 mergedArray.push(secondHalf[i]) 
                 mergedArray.push(firstHalf[i])
             } else { 
@@ -27,6 +26,5 @@ function merge(array) {
                 mergedArray.push(secondHalf[i])
             }
         }
-    // }
     return mergedArray;
 }
