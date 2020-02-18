@@ -1,15 +1,18 @@
 function bubbleSort(array) {
 
-  console.log('hello')
+  let swaps = true
 
-  for (let i=0; i<array.length; i++) {
-    if (array[i] > array[i+1]) {
-      let swapArray = swap(array, i, i+1)
-      return swapArray
+  while(swaps) { 
+    swaps = false
+
+    for(let i = 0; i < array.length; i++) { 
+      if(array[i] > array[i+1]) { 
+        array = swap(array, i, i + 1)
+        swaps = true
+      }
     }
+    return array
   }
-
-  return array
 }
 
 function swap(arr, leftIndex, rightIndex) {
@@ -18,8 +21,4 @@ function swap(arr, leftIndex, rightIndex) {
   arr[rightIndex] = biggerNumber
   return arr
 }
-
-
-bubbleSort([])
-bubbleSort([3,2,1])
 
