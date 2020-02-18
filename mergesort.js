@@ -10,12 +10,12 @@ function split(wholeArray) {
     }
 }
 
+
 function merge(array) { 
     let mergedArray = [];
     let firstHalf = array[0]
     let secondHalf = array[1]
-    for(let i = 0; i < firstHalf.length; i++) { 
-        // for(let j = 0; j < secondHalf.length; j++) { 
+        for(let i = 0; i < firstHalf.length; i++) {
             if(!secondHalf[i]) { 
                 mergedArray.push(firstHalf[i])
             }
@@ -27,6 +27,19 @@ function merge(array) {
                 mergedArray.push(secondHalf[i])
             }
         }
-    // }
+    
     return mergedArray;
+}
+
+
+function mergeSort (array) {
+    if (array.length <= 1) return array
+    let splitedArr = split(array)
+    let first = mergeSort(splitedArr[0])
+    let second = mergeSort(splitedArr[1])
+    // console.log(first)
+    // console.log(second)
+    let result = merge([first, second])
+    console.log(result)
+    return result
 }
